@@ -27,3 +27,4 @@
 
 - Tell me 3 different ways to include css in html
 
+- Describe in which way we can use HTML to make webpages as accessible to as many people as possible.
