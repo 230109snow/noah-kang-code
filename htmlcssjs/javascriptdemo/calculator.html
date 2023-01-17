@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>A Simple Calculator</title>
+    <style>
+    table{
+      margin: auto;
+      border: 2px solid black;
+    }
+    input[type="button"]{
+        width: 100%;
+        padding: 20px 50px;
+        background-color:navy;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    }
+
+    input[type="text"]{
+      padding: 20px 30px;
+      background-color: white;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border: 2px solid black;
+    }
+    </style>
+    <link rel = "stylesheet", href = "style.css">
+    <!-- <link rel="stylesheet" href="calcstyle.css"> doesn't work? -->
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="#">Calculator</a></li>
+        <li><a href="hangman.html">Hangman</a></li>
+      </ul>
+    </nav>
+      <table id = "calculator">
+        <tr>
+          <td colspan="2"><input type="text" id="result" disabled></td>
+          <td><input type="button" onclick="reset()" value="c"></td>
+        </tr>
+        <tr>
+          <th><input type="button" onclick="display(9); calculator(this)" value="9"></th>
+          <th><input type="button" onclick="display(8); calculator(this)" value="8"></th>
+          <th><input type="button" onclick="display(7); calculator(this)" value="7"></th>
+        </tr>
+
+        <tr>
+          <th><input type="button" onclick="display(6); calculator(this)" value="6"></th>
+          <th><input type="button" onclick="display(5); calculator(this)" value="5"></th>
+          <th><input type="button" onclick="display(4); calculator(this)" value="4"></th>
+        </tr>
+
+        <tr>
+          <th><input type="button" onclick="display(3); calculator(this)" value="3"></th>
+          <th><input type="button" onclick="display(2); calculator(this)" value="2"></th>
+          <th><input type="button" onclick="display(1); calculator(this)" value="1"></th>
+        </tr>
+
+        <tr>
+          <th><input type="button" onclick="display('+'); calculator(this)" value="+"></th>
+          <th><input type="button" onclick="display('-'); calculator(this)" value="-"></th>
+          <th><input type="button" onclick="display(0); calculator(this)" value="0"></th>
+        </tr>
+        <tr>
+          <th><input type="button" onclick="display('*'); calculator(this)" value="*"></th>
+          <th><input type="button" onclick="display('/'); calculator(this)" value="/"></th>
+          <th><input type="button" onclick="calculate('=')" value="="></th>
+        </tr>
+      </table>
+
+
+      <script src = "events.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.js"></script>
+
+  </body>
+</html>

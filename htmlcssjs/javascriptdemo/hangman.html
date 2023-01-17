@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman Game</title>
+    <style>
+      #top_table, #alpha_table{
+        margin: auto;
+        border: 2px black solid;
+        border-color: black
+      }
+      input[type="button"]{
+        width: 100%;
+        padding: 8px 15px;
+      }
+      #startbutton{
+        padding: 13px 20px;
+      }
+      #hanged_man_img{
+        
+      }
+    </style>
+    <link rel = "stylesheet", href = "style.css">
+  </head>
+  <body>
+    <nav><script src = "https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.js"></script>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="#">Hangman</a></li>
+      </ul>
+    </nav>
+
+    <table id = "top_table">
+      <tr>
+        <td colspan = "5">
+          Score:<input type = "text" name = "score" value = "0" size = "2">
+          Lives (6): <input type = "text" name = "lives" value = "0" size = "2">
+        </td>
+        <td colspan = "7">
+          <input type = "text" name = "word" value = "HANGMAN" size = 25>
+          <br>
+          <input type = "text" name = "tried" value = "Press START for random word!" size = 25>
+        </td>
+        <td colspan = 2>
+          <input type = "button" id = "startbutton" onclick = "newWord(this);" value = "START">
+        </td>
+      </tr>
+    </table>
+
+    <div>
+      <img id = "hanged_man_img" src="hangman_img_src/hanged_man_0.jpg" alt="hanged man">
+ <!-- DEBUG code for testing image changing based on switch case. -->
+      <!-- <input type = "button" value = "Change image to 0 (DEBUG)" onclick = "changeImgDebug(0);">
+      <input type = "button" value = "Change image to 1 (DEBUG)" onclick = "changeImgDebug(1);">
+      <input type = "button" value = "Change image to 2 (DEBUG)" onclick = "changeImgDebug(2);">
+      <input type = "button" value = "Change image to 3 (DEBUG)" onclick = "changeImgDebug(3);">
+      <input type = "button" value = "Change image to 4 (DEBUG)" onclick = "changeImgDebug(4);">
+      <input type = "button" value = "Change image to 5 (DEBUG)" onclick = "changeImgDebug(5);">
+      <input type = "button" value = "Change image to 6 (DEBUG)" onclick = "changeImgDebug(6);"> -->
+    </div>
+
+    <table id = "alpha_table">
+      <tr>
+        <td><input type = "button" value = "A" onclick = "seek('A');"></td>
+        <td><input type = "button" value = "B" onclick = "seek('B');"></td>
+        <td><input type = "button" value = "C" onclick = "seek('C');"></td>
+        <td><input type = "button" value = "D" onclick = "seek('D');"></td>
+        <td><input type = "button" value = "E" onclick = "seek('E');"></td>
+        <td><input type = "button" value = "F" onclick = "seek('F');"></td>
+        <td><input type = "button" value = "G" onclick = "seek('G');"></td>
+        <td><input type = "button" value = "H" onclick = "seek('H');"></td>
+        <td><input type = "button" value = "I" onclick = "seek('I');"></td>
+        <td><input type = "button" value = "J" onclick = "seek('J');"></td>
+        <td><input type = "button" value = "K" onclick = "seek('K');"></td>
+        <td><input type = "button" value = "L" onclick = "seek('L');"></td>
+        <td><input type = "button" value = "M" onclick = "seek('M');"></td>
+      </tr>
+      <tr>
+        <td><input type = "button" value = "N" onclick = "seek('N');"></td>
+        <td><input type = "button" value = "O" onclick = "seek('O');"></td>
+        <td><input type = "button" value = "P" onclick = "seek('P');"></td>
+        <td><input type = "button" value = "Q" onclick = "seek('Q');"></td>
+        <td><input type = "button" value = "R" onclick = "seek('R');"></td>
+        <td><input type = "button" value = "S" onclick = "seek('S');"></td>
+        <td><input type = "button" value = "T" onclick = "seek('T');"></td>
+        <td><input type = "button" value = "U" onclick = "seek('U');"></td>
+        <td><input type = "button" value = "V" onclick = "seek('V');"></td>
+        <td><input type = "button" value = "W" onclick = "seek('W');"></td>
+        <td><input type = "button" value = "X" onclick = "seek('X');"></td>
+        <td><input type = "button" value = "Y" onclick = "seek('Y');"></td>
+        <td><input type = "button" value = "Z" onclick = "seek('Z');"></td>
+      </tr>
+    </table>
+
+    <script src = "events.js"></script>
+  </body>
+</html>

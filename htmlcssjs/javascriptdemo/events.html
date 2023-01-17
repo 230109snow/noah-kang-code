@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="hangman.html">Hangman</a></li>
+      </ul>
+    </nav>
+
+      <h2>Counter:</h2> 
+      <div id="count">0</div>
+      <button onclick="modifyNum(1)">Increment</button>
+      <button onclick="modifyNum(-1)">Decrement</button>
+      <button onclick="reset()">Reset</button>      
+      
+      <!-- using inputs -->
+      <div>
+        <div class="container">
+          <h2>FizzBuzz!</h2>
+          <form onsubmit="resetTable(); fizzbuzzTable(this); return false">
+            <input type="number" name = "fizzbuzz-input" id="fizzbuzz-input" max = "100" min = "1" >
+            <input type = "submit" value = "FizzBuzz!">
+            <!-- <button onclick="resetTable(); fizzbuzzTable()">Fizzbuzz!</button> -->
+          </form>
+          
+        </div>
+        <table>
+          <thead>
+            <th>Number</th>
+            <th>Output</th>
+          </thead>
+          <tbody id = "fizzbuzz_output">
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+
+      <div onclick="parentOfBtns(event)">
+        <button id="btn1" onclick="console.log('btn1')">
+            1
+        </button>
+        <button id="btn2" onclick="console.log('btn2')">
+            2
+        </button>
+        <button id="btn3" onclick="console.log('btn3')">
+            3
+        </button>
+      </div>
+
+
+      <script src = "events.js"></script>
+
+  </body>
+</html>

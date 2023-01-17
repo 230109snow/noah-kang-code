@@ -1,0 +1,23 @@
+table{
+    margin: auto;
+    border: 2px solid black;
+  }
+  input[type="button"]{
+      width: 100%;
+      padding: 20px 50px;
+      background-color:navy;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+  }
+
+  input[type="text"]{
+    padding: 20px 30px;
+    background-color: white;
+    font-weight: bold;
+    border: none;
+    border: 2px solid black;        
+  }
